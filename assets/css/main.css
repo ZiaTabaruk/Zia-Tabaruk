@@ -625,6 +625,30 @@ section,
   line-height: 0;
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  list-style: none;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-start; /* Menjaga agar konten tetap di kiri */
+  align-items: center; /* Menjaga teks tetap rata */
+}
+
+ul li strong {
+  min-width: 100px; /* Mengurangi lebar minimum untuk label agar lebih dekat dengan isinya */
+  margin-right: 10px; /* Mengurangi jarak antara label dan isi */
+}
+
+.skills-list {
+  display: inline-block;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
 /*--------------------------------------------------------------
 # Stats Section
 --------------------------------------------------------------*/
@@ -877,6 +901,12 @@ section,
   bottom: 0;
 }
 
+img {
+  width: 100%;
+  height: 500px; /* Sesuaikan tinggi dengan proporsi yang diinginkan */
+  object-fit: cover;
+  object-position: center;
+}
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
