@@ -606,12 +606,14 @@ section,
 .about .content ul {
   list-style: none;
   padding: 0;
+  text-align: left;
 }
 
 .about .content ul li {
   margin-bottom: 20px;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .about .content ul strong {
@@ -639,8 +641,8 @@ ul li {
 }
 
 ul li strong {
-  min-width: 100px; /* Mengurangi lebar minimum untuk label agar lebih dekat dengan isinya */
-  margin-right: 10px; /* Mengurangi jarak antara label dan isi */
+  min-width: 80px; /* Mengurangi lebar minimum untuk label agar lebih dekat dengan isinya */
+  margin-right: 12px; /* Mengurangi jarak antara label dan isi */
 }
 
 .skills-list {
@@ -649,6 +651,44 @@ ul li strong {
   word-wrap: break-word;
 }
 
+<!-- Custom CSS for skills animation -->
+<style>
+  .skills-list {
+  display: flex;
+  flex-wrap: nowrap; /* Pastikan item skill membungkus jika ruang horizontal tidak cukup */
+  justify-content: space-between; /* Menjaga jarak antara setiap item secara merata */
+  /* overflow: visible; Pastikan tidak menyembunyikan konten di luar batas */
+  max-width: 100%;
+  padding-left: 10px;
+ }
+
+ .skill-item {
+  display: inline-block;
+  text-align: center;
+  margin-right: 30px; /* Memberikan jarak antara setiap gambar */
+ }
+
+  .skill-item img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+  }
+
+  .skill-item p {
+    font-weight: bold;
+    font-size: 14px; /* Adjust this size to match the degree text size */
+    margin-top: 10px; /* Optional: to space the text from the image */
+    text-align: center; /* To ensure the text stays centered below the image */
+  }
+  
+  .degree-text {
+    font-weight: bold;
+    font-size: 16px; /* Match this size with your degree text */
+  }
+
+  .skills-content h6 {
+    font-weight: bold !important;
+}
 /*--------------------------------------------------------------
 # Stats Section
 --------------------------------------------------------------*/
